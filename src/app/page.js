@@ -1,9 +1,9 @@
 "use client";
 import Head from "next/head";
-import TextType from "../components/TextType";
+import TextType from "./components/TextType";
 import { useState } from "react";
 
-export default function HomePage() {
+export default function Home() {
   const menuData = [
     {
       category: "Pernikahan",
@@ -38,17 +38,6 @@ export default function HomePage() {
         { title: "Acara Kantor Template 6", link: "#" },
       ],
     },
-    {
-      category: "Keagamaan",
-      items: [
-        { title: "Keagamaan Template 1", link: "#" },
-        { title: "Keagamaan Template 2", link: "#" },
-        { title: "Keagamaan Template 3", link: "#" },
-        { title: "Keagamaan Template 4", link: "#" },
-        { title: "Keagamaan Template 5", link: "#" },
-        { title: "Keagamaan Template 6", link: "#" },
-      ],
-    },
   ];
 
   const [activeCat, setActiveCat] = useState(menuData[0].category);
@@ -73,11 +62,11 @@ export default function HomePage() {
             <div className="flex flex-col justify-between h-full">
               {/* Bagian atas : Judul + Tombol */}
               <div>
-                <h1 className="text-3xl md:text-5xl text-[#1B3C53] leading-snug mb-8">
+                <h1 className="text-3xl md:text-5xl text-[#34656D] leading-snug mb-8">
                   Buat undangan
                   <TextType
-                    text={[" Pernikahan", " Ulang Tahun", " Semuanya"]}
-                    typingSpeed={75}
+                    text={[" pernikahan", " ulang tahun", " lainnya"]}
+                    typingSpeed={10}
                     pauseDuration={1500}
                     showCursor={true}
                     cursorCharacter="|"
@@ -91,13 +80,13 @@ export default function HomePage() {
                 <div className="flex gap-4">
                   <a
                     href="#harga"
-                    className="bg-slate-800 text-white px-5 py-2 rounded-md hover:bg-slate-900 transition"
+                    className="bg-[#34656D] text-white px-5 py-2 rounded-md hover:bg-slate-600 transition"
                   >
                     Lihat Harga
                   </a>
                   <a
                     href="#contoh"
-                    className="bg-slate-600 text-white px-5 py-2 rounded-md hover:bg-slate-700 transition"
+                    className="bg-slate-600 text-white px-5 py-2 rounded-md hover:bg-[#34656D] transition"
                   >
                     Lihat Contoh
                   </a>
@@ -106,10 +95,10 @@ export default function HomePage() {
 
               {/* Bagian bawah : Harga */}
               <div className="mt-16 md:mt-auto">
-                <p className="mt-10 text-xl md:text-xl font-semibold text-slate-800">
+                <p className="mt-10 text-xl md:text-xl font-semibold text-[#34656D]">
                   Mulai dari
                 </p>
-                <p className="text-3xl md:text-4xl font-semibold text-slate-800">
+                <p className="text-3xl md:text-4xl font-semibold text-[#34656D]">
                   Rp. 25.000
                 </p>
               </div>
@@ -126,8 +115,8 @@ export default function HomePage() {
         </section>
 
         {/*  Section Contoh Template  */}
-        <section id="contoh" className="py-20 bg-white px-4">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#1B3C53] text-center">
+        <section id="contoh" className="py-20 bg-gray-50 px-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#34656D] text-center">
             Pilih Template, Wujudkan Undangan Impianmu
           </h1>
           <p className="text-gray-600 mb-10 max-w-2xl mx-auto text-center">
@@ -143,8 +132,8 @@ export default function HomePage() {
                 onClick={() => setActiveCat(cat.category)}
                 className={`px-4 py-2 rounded-lg ${
                   activeCat === cat.category
-                    ? "bg-[#1B3C53] text-white"
-                    : "bg-white text-[#1B3C53] hover:bg-gray-300"
+                    ? "bg-[#34656D] text-white"
+                    : "bg-white text-[#34656D] hover:bg-gray-300"
                 }`}
               >
                 {cat.category}
@@ -174,8 +163,8 @@ export default function HomePage() {
         </section>
 
         {/*  Section Harga  */}
-        <section id="harga" className="py-20 bg-gray-50 text-center px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+        <section id="harga" className="py-20 bg-white text-center px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#34656D]">
             Paket Harga
           </h2>
           <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -187,20 +176,58 @@ export default function HomePage() {
               {
                 name: "Basic",
                 price: "Rp25.000",
-                features: ["Masa Aktif 1 Minggu", "Musik Latar", "Countdown Timer", "Cerita (Opsional)", "Galeri (10 Foto)"," Cashless Gift","Ucapan & Doa","Reservasi Tamu","Buku Tamu","Peta Lokasi"],
+                features: [
+                  "✅Masa Aktif 1 Minggu",
+                  "✅Gratis Pilih Template",
+                  "❌Request Design Website",
+                  "❌Request Design Assets",
+                  "✅Musik Latar",
+                  "✅Countdown Timer",
+                  "✅Cerita (Opsional)",
+                  "✅Galeri (Max 10 Foto)",
+                  "✅Cashless Gift",
+                  "❌Ucapan & Doa",
+                  "❌Reservasi Tamu",
+                  "❌Buku Tamu",
+                  "✅Peta Lokasi",
+                ],
               },
               {
                 name: "Premium",
                 price: "Rp50.000",
-                features: ["2 Desain", "3 Revisi", "Animasi Sederhana"],
+                features: [
+                  "✅Masa Aktif 2 Minggu",
+                  "✅Gratis Pilih Template",
+                  "❌Request Design Website",
+                  "❌Request Design Assets",
+                  "✅Musik Latar",
+                  "✅Countdown Timer",
+                  "✅Cerita (Opsional)",
+                  "✅Galeri (Max 25 Foto)",
+                  "✅Cashless Gift",
+                  "✅Ucapan & Doa",
+                  "✅Reservasi Tamu",
+                  "✅Buku Tamu",
+                  "✅Peta Lokasi",
+                ],
               },
               {
                 name: "Exclusive",
                 price: "Rp100.000",
                 features: [
-                  "Desain Custom",
-                  "Unlimited Revisi",
-                  "Animasi Premium",
+                  "✅Masa Aktif 1-12 Bulan",
+                  "✅Gratis Pilih Template",
+                  "✅Request Design Website",
+                  "✅Request Design Assets",
+                  "✅Musik Latar",
+                  "✅Countdown Timer",
+                  "✅Cerita (Opsional)",
+                  "✅Galeri (♾️)",
+                  "✅Cashless Gift",
+                  "✅Ucapan & Doa",
+                  "✅Reservasi Tamu",
+                  "✅Buku Tamu",
+                  "✅Peta Lokasi",
                 ],
               },
             ].map((pkg, idx) => (
@@ -208,20 +235,20 @@ export default function HomePage() {
                 key={idx}
                 className="bg-white rounded-2xl shadow hover:shadow-xl transition p-8 flex flex-col"
               >
-                <h3 className="text-2xl font-semibold mb-2 text-[#1B3C53]">
+                <h3 className="text-2xl font-semibold mb-2 text-[#34656D]">
                   {pkg.name}
                 </h3>
-                <p className="text-[#1B3C53] text-3xl font-bold mb-4">
+                <p className="text-[#34656D] text-3xl font-bold mb-4">
                   {pkg.price}
                 </p>
-                <ul className="text-gray-600 flex-1 mb-6 space-y-2">
+                <ul className="text-gray-600 flex-1 mb-6 space-y-2 text-left">
                   {pkg.features.map((f, i) => (
                     <li key={i}>{f}</li>
                   ))}
                 </ul>
                 <a
                   href="#kontak"
-                  className="bg-[#1B3C53] text-white py-3 rounded-lg font-medium hover:bg-black transition"
+                  className="bg-[#34656D] text-white py-3 rounded-lg font-medium hover:bg-black transition"
                 >
                   Pesan Sekarang
                 </a>
@@ -231,12 +258,12 @@ export default function HomePage() {
         </section>
 
         {/* ===== Section Kontak ===== */}
-        <section id="kontak" className="py-20 bg-white text-center px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+        <section id="kontak" className="py-20 bg-gray-50 text-center px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#34656D]">
             Hubungi Kami
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Tanyakan detail atau pesan undangan online melalui kontak berikut:
+            Tanyakan detail atau pesan undangan online melalui kontak dibawah:
           </p>
 
           <div className="space-y-4 text-lg text-gray-700">
@@ -244,27 +271,26 @@ export default function HomePage() {
               Instagram:{" "}
               <a
                 href="https://instagram.com/username"
-                className="text-pink-600 hover:underline"
+                className="text-[#34656D] hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @username
+                @Kyundang_invt
               </a>
             </p>
             <p>
               WhatsApp:{" "}
               <a
-                href="https://wa.me/628xxxxxxxxx"
-                className="text-pink-600 hover:underline"
+                href="https://wa.me/6283897321220"
+                className="text-[#34656D] hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                +62 8xx-xxxx-xxxx
+                +6283897321220
               </a>
             </p>
             <p>
-              Email:{" "}
-              <span className="text-gray-800">halo@undanganonline.com</span>
+              Email: <span className="text-[#34656D]">kyuundang@gmail.com</span>
             </p>
           </div>
         </section>

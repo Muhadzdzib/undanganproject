@@ -13,6 +13,8 @@ const Header = () => {
     { label: "Home", link: "hero" },
     { label: "Contoh", link: "contoh" },
     { label: "Harga", link: "harga" },
+    { label: "Fitur", link: "fitur" },
+    { label: "Form Order", link: "order" },
     { label: "Kontak", link: "kontak" },
   ];
 
@@ -57,7 +59,7 @@ const Header = () => {
       <div className="max-w-6xl w-full mx-auto flex justify-between items-center py-4 font-jakarta text-[#34656D]">
         {/* Logo */}
         <div className="font-bold text-4xl ">
-          Lorem <span className="text-xl">tautan</span>
+          Kyundang <span className="text-xl">tautan</span>
         </div>
 
         {/* Desktop Menu */}
@@ -105,24 +107,6 @@ const Header = () => {
                 {menu.label}
               </a>
             ))}
-            <div className="flex gap-2 mt-2">
-              <button
-                onClick={() => setLang("Ind")}
-                className={`px-3 py-1 rounded ${
-                  lang === "Ind" ? "bg-gray-900 text-white" : "text-gray-900"
-                }`}
-              >
-                Ind
-              </button>
-              <button
-                onClick={() => setLang("Eng")}
-                className={`px-3 py-1 rounded ${
-                  lang === "Eng" ? "bg-gray-900 text-white" : "text-gray-900"
-                }`}
-              >
-                Eng
-              </button>
-            </div>
           </div>
         )}
       </div>
