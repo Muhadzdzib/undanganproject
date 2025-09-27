@@ -120,7 +120,7 @@ export default function Home() {
             Pilih Template, Wujudkan Undangan Impianmu
           </h1>
           <p className="text-gray-600 mb-10 max-w-2xl mx-auto text-center">
-            Berikut beberapa contoh undangan yang telah kami buat. Klik untuk
+            Berikut beberapa template undangan yang tersedia. Klik untuk
             melihat live demo.
           </p>
 
