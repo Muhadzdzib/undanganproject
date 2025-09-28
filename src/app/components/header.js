@@ -11,10 +11,9 @@ const Header = () => {
 
   const menus = [
     { label: "Home", link: "hero" },
-    { label: "Contoh", link: "contoh" },
-    { label: "Harga", link: "harga" },
+    { label: "Template", link: "contoh" },
     { label: "Fitur", link: "fitur" },
-    { label: "Form Order", link: "order" },
+    { label: "Harga", link: "harga" },
     { label: "Kontak", link: "kontak" },
   ];
 
@@ -55,10 +54,10 @@ const Header = () => {
         boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
       }}
     >
-      {/* ✅ Sama lebar dengan konten section */}
-      <div className="max-w-6xl w-full mx-auto flex justify-between items-center py-4 font-jakarta text-[#34656D]">
+      {/* ✅ Container, desktop tetap, mobile ada padding */}
+      <div className="max-w-6xl w-full mx-auto flex justify-between items-center py-4 px-4 md:px-0 font-jakarta text-[#34656D]">
         {/* Logo */}
-        <div className="font-bold text-4xl ">
+        <div className="font-bold text-4xl">
           Kyundang <span className="text-xl">tautan</span>
         </div>
 
@@ -92,7 +91,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="absolute top-full right-0 w-48 bg-white/80 backdrop-blur-md shadow-md rounded-b z-20 flex flex-col py-4 px-6 md:hidden animate-fade-in">
+          <div className="absolute top-full left-4 right-4 bg-white/90 backdrop-blur-md shadow-md rounded-lg z-20 flex flex-col py-4 px-6 md:hidden animate-fade-in">
             {menus.map((menu, idx) => (
               <a
                 key={idx}

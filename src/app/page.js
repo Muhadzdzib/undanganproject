@@ -62,15 +62,18 @@ export default function Home() {
             <div className="flex flex-col justify-between h-full">
               {/* Bagian atas : Judul + Tombol */}
               <div>
-                <h1 className="text-3xl md:text-5xl text-[#34656D] leading-snug mb-8">
+                <h1 className="text-xl md:text-5xl text-[#34656D] leading-snug mb-8">
                   Buat undangan
-                  <TextType
-                    text={[" pernikahan", " ulang tahun", " lainnya"]}
-                    typingSpeed={10}
-                    pauseDuration={1500}
-                    showCursor={true}
-                    cursorCharacter="|"
-                  />{" "}
+                  <span className="text-3xl">
+                    {" "}
+                    <TextType
+                      text={[" pernikahan", " ulang tahun", " lainnya"]}
+                      typingSpeed={10}
+                      pauseDuration={1000}
+                      showCursor={true}
+                      cursorCharacter="|"
+                    />{" "}
+                  </span>
                   <br />
                   bersama kami, <br />
                   abadikan momen istimewa <br />
@@ -94,7 +97,7 @@ export default function Home() {
               </div>
 
               {/* Bagian bawah : Harga */}
-              <div className="mt-16 md:mt-auto">
+              <div className="md:mt-auto">
                 <p className="mt-10 text-xl md:text-xl font-semibold text-[#34656D]">
                   Mulai dari
                 </p>
@@ -114,14 +117,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/*  Section Contoh Template  */}
+        {/*  Section Template  */}
         <section id="contoh" className="py-20 bg-gray-50 px-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#34656D] text-center">
             Pilih Template, Wujudkan Undangan Impianmu
           </h1>
           <p className="text-gray-600 mb-10 max-w-2xl mx-auto text-center">
-            Berikut beberapa template undangan yang tersedia. Klik untuk
-            melihat live demo.
+            Berikut beberapa template undangan yang tersedia. Klik untuk melihat
+            live demo.
           </p>
 
           {/* Menu Tabs */}
@@ -162,6 +165,161 @@ export default function Home() {
           </div>
         </section>
 
+        {/*  Section Fitur  */}
+        <section id="fitur" className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#34656D] text-center">
+              Nikmati Beragam Fitur untuk Undangan Digital
+            </h1>
+            <p className="text-center text-gray-600 mb-12">
+              Dari galeri foto, peta lokasi, hingga musik latar, semua tersedia.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Card 1 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-indigo-500 mb-4 text-5xl">🕒</div>
+                <h3 className="text-lg text-[#34656D] font-semibold mb-2">
+                  Masa Aktif
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Undangan bisa diakses sesuai kebutuhan, mulai dari 2 Minggu
+                  hingga 1 tahun penuh.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-pink-500 mb-4 text-5xl">🎨</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Gratis Pilih Template
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Pilih template favoritmu secara gratis dari berbagai desain
+                  elegan.
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-green-500 mb-4 text-5xl">💻</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Request Design Website
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Sesuaikan desain website undangan sesuai dengan tema acara.
+                </p>
+              </div>
+
+              {/* Card 4 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-yellow-500 mb-4 text-5xl">🖼️</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Request Design Assets
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Tambahkan elemen desain khusus agar undangan semakin personal.
+                </p>
+              </div>
+
+              {/* Card 5 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-blue-500 mb-4 text-5xl">🎵</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Musik Latar
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Lengkapi undanganmu dengan musik latar yang indah dan
+                  menyentuh.
+                </p>
+              </div>
+
+              {/* Card 6 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-red-500 mb-4 text-5xl">⏳</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Countdown Timer
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Hitung mundur menuju hari spesial secara otomatis di
+                  undanganmu.
+                </p>
+              </div>
+
+              {/* Card 7 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-indigo-500 mb-4 text-5xl">📖</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Cerita
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Tambahkan cerita perjalanan cinta untuk membuat undangan lebih
+                  personal.
+                </p>
+              </div>
+
+              {/* Card 8 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-pink-500 mb-4 text-5xl">📸</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Galeri
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Bagikan momen berharga dalam jumlah tak terbatas lewat galeri
+                  foto.
+                </p>
+              </div>
+
+              {/* Card 9 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-green-500 mb-4 text-5xl">💝</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Cashless Gift
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Permudah tamu memberikan hadiah secara online melalui
+                  transfer.
+                </p>
+              </div>
+
+              {/* Card 10 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-blue-500 mb-4 text-5xl">📝</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Reservasi Tamu
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Kelola kehadiran tamu dengan sistem reservasi yang mudah
+                  diisi.
+                </p>
+              </div>
+
+              {/* Card 11 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-red-500 mb-4 text-5xl">📔</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Buku Tamu
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Simpan kenangan ucapan tamu di buku tamu digital Anda.
+                </p>
+              </div>
+
+              {/* Card 12 */}
+              <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                <div className="text-indigo-500 mb-4 text-5xl">📍</div>
+                <h3 className="text-[#34656D] text-lg font-semibold mb-2">
+                  Peta Lokasi
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Sertakan peta interaktif agar tamu mudah menemukan lokasi
+                  acara.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/*  Section Harga  */}
         <section id="harga" className="py-20 bg-white text-center px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#34656D]">
@@ -181,12 +339,11 @@ export default function Home() {
                   "✅Gratis Pilih Template",
                   "❌Request Design Website",
                   "❌Request Design Assets",
-                  "✅Musik Latar",
+                  "❌Request Musik Latar",
                   "✅Countdown Timer",
                   "✅Cerita (Opsional)",
                   "✅Galeri (Max 10 Foto)",
                   "✅Cashless Gift",
-                  "❌Ucapan & Doa",
                   "❌Reservasi Tamu",
                   "❌Buku Tamu",
                   "✅Peta Lokasi",
@@ -196,7 +353,7 @@ export default function Home() {
                 name: "Premium",
                 price: "Rp50.000",
                 features: [
-                  "✅Masa Aktif 2 Minggu",
+                  "✅Masa Aktif 1 Bulan",
                   "✅Gratis Pilih Template",
                   "❌Request Design Website",
                   "❌Request Design Assets",
@@ -205,7 +362,6 @@ export default function Home() {
                   "✅Cerita (Opsional)",
                   "✅Galeri (Max 25 Foto)",
                   "✅Cashless Gift",
-                  "✅Ucapan & Doa",
                   "✅Reservasi Tamu",
                   "✅Buku Tamu",
                   "✅Peta Lokasi",
@@ -213,7 +369,7 @@ export default function Home() {
               },
               {
                 name: "Exclusive",
-                price: "Rp100.000",
+                price: "Rp175.000",
                 features: [
                   "✅Masa Aktif 1-12 Bulan",
                   "✅Gratis Pilih Template",
@@ -224,7 +380,6 @@ export default function Home() {
                   "✅Cerita (Opsional)",
                   "✅Galeri (♾️)",
                   "✅Cashless Gift",
-                  "✅Ucapan & Doa",
                   "✅Reservasi Tamu",
                   "✅Buku Tamu",
                   "✅Peta Lokasi",
@@ -247,7 +402,8 @@ export default function Home() {
                   ))}
                 </ul>
                 <a
-                  href="#kontak"
+                  href="https://wa.me/6283897321220"
+                  target="_blank"
                   className="bg-[#34656D] text-white py-3 rounded-lg font-medium hover:bg-black transition"
                 >
                   Pesan Sekarang
