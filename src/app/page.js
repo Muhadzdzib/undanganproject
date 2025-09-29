@@ -230,7 +230,7 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-600 text-sm">
                   Lengkapi undanganmu dengan musik latar yang indah dan
-                  menyentuh.
+                  menyentuh (Bebas Requst Lagu).
                 </p>
               </div>
 
