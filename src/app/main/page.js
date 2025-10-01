@@ -2,6 +2,7 @@
 import Head from "next/head";
 import TextType from "../components/TextType";
 import { useState } from "react";
+import "../globals.css";
 
 export default function Home() {
   const menuData = [

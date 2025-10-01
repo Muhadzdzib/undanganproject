@@ -24,21 +24,29 @@ function CoverScreen({ onOpen }) {
   if (guestName === null) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-pink-100 to-pink-200 z-50">
-      <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md mx-auto text-center border-4 border-pink-300">
-        <h2 className="text-lg font-semibold text-gray-700 mb-2">
+    <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-[#9AA496] to-[#D9DAD3] z-50">
+      <div className="relative bg-[#F5F1EE] rounded-3xl shadow-2xl p-10 max-w-lg mx-auto text-center border-8 border-[#9AA496]">
+        {/* Ornamen Atas */}
+        <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-[#D9DAD3] rounded-full flex items-center justify-center shadow-md">
+          <span className="text-2xl">💍</span>
+        </div>
+
+        <h2 className="text-lg font-medium text-gray-600 mt-6 mb-2 italic">
           Dengan Hormat,
         </h2>
+
         <p className="text-gray-600 mb-4">
           Kami mengundang <span className="font-bold">{guestName}</span>
-          <br /> pada acara pernikahan kami.
+          <br /> untuk menghadiri acara pernikahan kami.
         </p>
-        <h1 className="text-2xl font-bold text-pink-600 mb-6">
+
+        <h1 className="text-3xl font-extrabold text-[#5E7672] mb-4 font-serif">
           Roman & Picisan
         </h1>
+
         <button
           onClick={onOpen}
-          className="px-6 py-2 bg-pink-500 text-white rounded-full shadow hover:bg-pink-600 transition"
+          className="px-8 py-3 bg-gradient-to-r from-[#9AA496] to-[#D9DAD3] text-[#5E7672] font-semibold rounded-full shadow-lg hover:scale-105 transition-transform"
         >
           Buka Undangan
         </button>
@@ -108,17 +116,32 @@ export default function Template1() {
           </button>
 
           {/* SECTION 1: Hero */}
-          <section
-            className="h-screen flex flex-col items-center justify-center bg-cover bg-center relative text-white text-center"
-            style={{ backgroundImage: "url('/bg-wedding.jpg')" }}
-          >
-            <div className="absolute inset-0 bg-black/40"></div>
+          <section className="h-screen flex flex-col items-center justify-center bg-cover bg-center relative text-[#2C4642] text-center bg-[#F5F2EC] overflow-hidden">
+            {/* Ornamen Atas Kiri */}
+            <div className="absolute top-0 left-0 w-48 h-48 opacity-60">
+              <img
+                src="/ornament-floral-top.svg"
+                alt="ornamen floral"
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Ornamen Bawah Kanan */}
+            <div className="absolute bottom-0 right-0 w-56 h-56 opacity-60">
+              <img
+                src="/ornament-floral-bottom.svg"
+                alt="ornamen floral"
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Konten Tengah */}
             <div className="relative z-10 px-4">
               <p className="text-lg tracking-wide mb-4" data-aos="fade-up">
                 The Wedding Of
               </p>
               <h1
-                className="text-5xl font-bold mb-4 font-serif"
+                className="text-5xl font-bold mb-4 font-serif text-[#C47A7A]"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
