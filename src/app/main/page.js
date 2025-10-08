@@ -14,8 +14,16 @@ export default function Home() {
           link: "/pernikahan/template1",
           target: "_blank",
         },
-        { title: "Pernikahan Template 2", link: "#" },
-        { title: "Pernikahan Template 3", link: "#" },
+        {
+          title: "Pernikahan Template 2",
+          link: "/pernikahan/template2",
+          target: "_blank",
+        },
+        {
+          title: "Pernikahan Template 3",
+          link: "/pernikahan/template3",
+          target: "_blank",
+        },
         { title: "Pernikahan Template 4", link: "#" },
         { title: "Pernikahan Template 5", link: "#" },
         { title: "Pernikahan Template 6", link: "#" },

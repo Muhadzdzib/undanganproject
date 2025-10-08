@@ -20,7 +20,7 @@ function CoverScreen({ onOpen }) {
     }
   }, []);
 
-  // Jangan render sampai guestName sudah diset
+
   if (guestName === null) return null;
 
   return (
